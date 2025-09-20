@@ -1,7 +1,13 @@
 <launch>
-    <arg name="config_path" default = "$(find feature_tracker)/../config/euroc/euroc_config.yaml" />
+
+    <node pkg="image_transport" type="republish" name="image_republish"
+      args="compressed in:=/left/image_rect  raw out:=/left/image_rect"
+      output="screen" respawn="true" />
+
+
+    <arg name="config_path" default = "$(find feature_tracker)/../config/penncosyvio/penncosyvio.yaml" />
 	<arg name="vins_path" default = "$(find feature_tracker)/../config/../" />
-    <arg name="output_path" default = "/root/data/ood_slam_data/datasets/euroc/VINS-Mono-outputs" />
+    <arg name="output_path" default = "$(find feature_tracker)/../config/../" />
 
     <arg name="bag" default=""/>          <!-- set on CLI: bag:=/path/file.bag -->
     <arg name="play_rate" default="1.0"/>

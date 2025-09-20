@@ -3,8 +3,21 @@
     <node pkg="image_transport" type="republish" name="image_republish" args="compressed in:=/camera/color/image_raw raw out:=/camera/color/image_raw" output="screen" respawn="true"/>
 
     <arg name="config_path" default = "$(find feature_tracker)/../config/m2dgr.yaml" />
-	  <arg name="vins_path" default = "$(find feature_tracker)/../config/../" />
-    
+	<arg name="vins_path" default = "$(find feature_tracker)/../config/../" />
+    <arg name="output_path" default = "$(find feature_tracker)/../config/../" />
+
+    <arg name="bag" default=""/>          <!-- set on CLI: bag:=/path/file.bag -->
+    <arg name="play_rate" default="1.0"/>
+    <arg name="start"     default="0.0"/>
+    <arg name="loop"      default="false"/>
+    <param name="/use_sim_time" value="true"/>
+
+    <group if="$(eval arg('bag') != '')">
+        <node pkg="rosbag" type="play" name="bag_play" output="screen" required="true"
+            args="--clock -r $(arg play_rate) $(arg bag)"/>
+    </group>
+
+
     <node name="feature_tracker" pkg="feature_tracker" type="feature_tracker" output="log">
         <param name="config_file" type="string" value="$(arg config_path)" />
         <param name="vins_folder" type="string" value="$(arg vins_path)" />
@@ -13,6 +26,7 @@
     <node name="vins_estimator" pkg="vins_estimator" type="vins_estimator" output="screen">
        <param name="config_file" type="string" value="$(arg config_path)" />
        <param name="vins_folder" type="string" value="$(arg vins_path)" />
+       <param name="output_path" type="string" value="$(arg output_path)" />
     </node>
 
     <node name="pose_graph" pkg="pose_graph" type="pose_graph" output="screen">
@@ -21,6 +35,7 @@
         <param name="visualization_shift_y" type="int" value="0" />
         <param name="skip_cnt" type="int" value="0" />
         <param name="skip_dis" type="double" value="0" />
+        <param name="output_path" type="string" value="$(arg output_path)" />
     </node>
 
 </launch>

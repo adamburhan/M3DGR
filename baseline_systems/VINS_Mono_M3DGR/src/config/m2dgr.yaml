@@ -1,7 +1,7 @@
 %YAML:1.0
 
 #common parameters
-imu_topic: "/handsfree/imu"
+imu_topic: "/camera/imu"
 image_topic: "/camera/color/image_raw"
 output_path: "/media/zjj/Newsmy/linux/VINS-Mono/src"
 
@@ -11,15 +11,15 @@ camera_name: camera
 image_width: 640
 image_height: 480
 distortion_parameters:
-   k1: 0.148000794688248
-   k2: -0.217835187249065
-   p1: 0.0
-   p2: 0.0
+   k1: 9.2615504465028850e-02
+   k2: -1.8082438825995681e-01
+   p1: -6.5484100374765971e-04
+   p2: -3.5829351558557421e-04
 projection_parameters:
-   fx: 617.971050917033
-   fy: 616.445131524790
-   cx: 327.710279392468
-   cy: 253.976983707814
+   fx: 612.0813598632812
+   fy: 610.395263671875
+   cx: 328.0500793457031
+   cy: 254.96112060546875
 
 
 # Extrinsic parameter between IMU and Camera.
@@ -32,23 +32,23 @@ extrinsicRotation: !!opencv-matrix
    rows: 3
    cols: 3
    dt: d
-   data: [ 0.0,  0.0,  1.0,
-           -1.0,  0.0,  0.0, 
-           0.0,  -1.0,  0.0]
+   data: [ 0.99964621, 0.01105994, 0.02418954,
+          -0.01088975, 0.9999151, -0.00715601,
+          -0.02426663, 0.00689006, 0.99968178]
 #Translation from camera frame to imu frame, imu^T_cam
 extrinsicTranslation: !!opencv-matrix
    rows: 3
    cols: 1
    dt: d
-   data: [0.57711, -0.00012, 0.83333]
+   data: [0.07494282, -0.01077138, -0.00641822]
 
 #feature traker paprameters
 max_cnt: 150            # max feature number in feature tracking
-min_dist: 30            # min distance between two features 
-freq: 10                # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
+min_dist: 25            # min distance between two features 
+freq: 0                # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
 F_threshold: 1.0        # ransac threshold (pixel)
 show_track: 1           # publish tracking image as topic
-equalize: 1             # if image is too dark or light, trun on equalize to find enough features
+equalize: 0             # if image is too dark or light, trun on equalize to find enough features
 fisheye: 0              # if using fisheye, trun on it. A circle mask will be loaded to remove edge noisy points
 
 #optimization parameters
@@ -56,12 +56,12 @@ max_solver_time: 0.04  # max solver itration time (ms), to guarantee real time
 max_num_iterations: 8   # max solver itrations, to guarantee real time
 keyframe_parallax: 10.0 # keyframe selection threshold (pixel)
 
-#imu parameters       The more accurate parameters you provide, the better performance
-acc_n: 1.2820343288774358e-01           # accelerometer measurement noise standard deviation. #0.2   0.04
-gyr_n: 2.1309311394972831e-02         # gyroscope measurement noise standard deviation.     #0.05  0.004
-acc_w: 1.3677912958097768e-02         # accelerometer bias random work noise standard deviation.  #0.02
-gyr_w: 3.6603917782528627e-04       # gyroscope bias random work noise standard deviation.     #4.0e-5
-g_norm: 9.805     # gravity magnitude
+#imu parameters The more accurate parameters you provide, the better performance
+acc_n: 0.1 # accelerometer measurement noise standard deviation. #0.2
+gyr_n: 0.01 # gyroscope measurement noise standard deviation. #0.05
+acc_w: 0.0002 # accelerometer bias random work noise standard deviation. #0.02
+gyr_w: 2.0e-5 # gyroscope bias random work noise standard deviation. #4.0e-5
+g_norm: 9.805 # gravity magnitude
 
 #loop closure parameters
 loop_closure: 1                    # start loop closure
@@ -70,7 +70,7 @@ fast_relocalization: 0             # useful in real-time and large project
 pose_graph_save_path: "/media/zjj/Newsmy/linux/VINS-Mono/src" # save and load path
 
 #unsynchronization parameters
-estimate_td: 0                      # online estimate time offset between camera and imu
+estimate_td: 1                      # online estimate time offset between camera and imu
 td: 0.0                             # initial value of time offset. unit: s. readed image clock + td = real image clock (IMU clock)
 
 #rolling shutter parameters

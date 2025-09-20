@@ -57,7 +57,17 @@ void readParameters(ros::NodeHandle &n)
     MIN_PARALLAX = MIN_PARALLAX / FOCAL_LENGTH;
 
     std::string OUTPUT_PATH;
-    fsSettings["output_path"] >> OUTPUT_PATH;
+
+    // *** MODIFICATION START ***
+    
+    // try ROS param first; if missing, fall back to YAML
+    if (!n.getParam("output_path", OUTPUT_PATH)) {
+        fsSettings["output_path"] >> OUTPUT_PATH;
+    }
+    //fsSettings["output_path"] >> OUTPUT_PATH;
+
+    // *** MODIFICATION END ***
+
     VINS_RESULT_PATH = OUTPUT_PATH + "/vins_result_no_loop.csv";
     std::cout << "result path " << VINS_RESULT_PATH << std::endl;
 
