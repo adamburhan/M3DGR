@@ -1,1 +1,41 @@
+# ROS and Catkin build artifacts
+build/
+devel/
+install/
+.catkin_tools/
+
+# Logs and debugging files
+*.log
+*.bag
+*.active
+*.db
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*.bak
+*.~*
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# CMake and Make artifacts
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Custom entries
 .qodo
