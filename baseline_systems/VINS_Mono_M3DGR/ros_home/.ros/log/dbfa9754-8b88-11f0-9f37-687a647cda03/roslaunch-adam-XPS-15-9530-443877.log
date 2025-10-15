@@ -1,0 +1,151 @@
+[roslaunch][INFO] 2025-09-06 22:01:26,202: Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+[roslaunch][INFO] 2025-09-06 22:01:26,209: Done checking log file disk usage. Usage is <1GB.
+[roslaunch][INFO] 2025-09-06 22:01:26,210: roslaunch starting with args ['/opt/ros/kinetic/bin/roslaunch', 'vins_estimator', 'm3dgr.launch', 'bag:=/root/data/ood_slam_data/datasets/m3dgr/Varying-illu01.bag', 'output_path:=/root/data/TESTT']
+[roslaunch][INFO] 2025-09-06 22:01:26,210: roslaunch env is {'PYTHONIOENCODING': 'UTF-8', 'HOME': '/root/ros_home', 'ROS_DISTRO': 'kinetic', 'APPTAINER_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'APPTAINER_APPNAME': '', 'CATKIN_WS': '/root/catkin_ws', 'SINGULARITY_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'ROSLISP_PACKAGE_DIRECTORIES': '/root/catkin_ws/devel/share/common-lisp', 'ROS_PACKAGE_PATH': '/root/catkin_ws/src/benchmark_publisher:/root/catkin_ws/src/camera_model:/root/catkin_ws/src/ar_demo:/root/catkin_ws/src/data_generator:/root/catkin_ws/src/feature_tracker:/root/catkin_ws/src/pose_graph:/root/catkin_ws/src/vins_estimator:/opt/ros/kinetic/share', 'PATH': '/opt/ros/kinetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'APPTAINER_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'LD_LIBRARY_PATH': '/root/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/.singularity.d/libs', 'LANG': 'C.UTF-8', 'TERM': 'xterm', 'PS1': 'Apptainer> ', 'SHLVL': '1', 'SINGULARITY_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'ROS_LOG_FILENAME': '/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/roslaunch-adam-XPS-15-9530-443877.log', 'APPTAINER_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'ROS_ETC_DIR': '/opt/ros/kinetic/etc/ros', 'APPTAINER_NAME': 'ros_vins_mono.sif', 'ROS_PYTHON_VERSION': '2', 'CMAKE_PREFIX_PATH': '/root/catkin_ws/devel:/opt/ros/kinetic', 'SINGULARITY_NAME': 'ros_vins_mono.sif', 'APPTAINER_COMMAND': 'exec', 'PYTHONPATH': '/opt/ros/kinetic/lib/python2.7/dist-packages', 'ROS_ROOT': '/opt/ros/kinetic/share/ros', 'PKG_CONFIG_PATH': '/root/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig', 'LC_ALL': 'C.UTF-8', '_': '/opt/ros/kinetic/bin/roslaunch', 'OLDPWD': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/VINS_Mono_M3DGR', 'SINGULARITY_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'CERES_VERSION': '1.12.0', 'PWD': '/root/catkin_ws', 'ROS_MASTER_URI': 'http://localhost:11311', 'ROS_VERSION': '1'}
+[roslaunch][INFO] 2025-09-06 22:01:26,210: starting in server mode
+[roslaunch.parent][INFO] 2025-09-06 22:01:26,211: starting roslaunch parent run
+[roslaunch][INFO] 2025-09-06 22:01:26,211: loading roscore config file /opt/ros/kinetic/etc/ros/roscore.xml
+[roslaunch][INFO] 2025-09-06 22:01:26,464: Added core node of type [rosout/rosout] in namespace [/]
+[roslaunch.config][INFO] 2025-09-06 22:01:26,465: loading config file /root/catkin_ws/src/vins_estimator/launch/m3dgr.launch
+[roslaunch][INFO] 2025-09-06 22:01:26,465: Added node of type [image_transport/republish] in namespace [/]
+[roslaunch][INFO] 2025-09-06 22:01:26,481: Added node of type [rosbag/play] in namespace [/]
+[roslaunch][INFO] 2025-09-06 22:01:26,482: Added node of type [feature_tracker/feature_tracker] in namespace [/]
+[roslaunch][INFO] 2025-09-06 22:01:26,482: Added node of type [vins_estimator/vins_estimator] in namespace [/]
+[roslaunch][INFO] 2025-09-06 22:01:26,482: Added node of type [pose_graph/pose_graph] in namespace [/]
+[roslaunch][INFO] 2025-09-06 22:01:26,482: ... selected machine [] for node of type [image_transport/republish]
+[roslaunch][INFO] 2025-09-06 22:01:26,482: ... selected machine [] for node of type [rosbag/play]
+[roslaunch][INFO] 2025-09-06 22:01:26,482: ... selected machine [] for node of type [feature_tracker/feature_tracker]
+[roslaunch][INFO] 2025-09-06 22:01:26,482: ... selected machine [] for node of type [vins_estimator/vins_estimator]
+[roslaunch][INFO] 2025-09-06 22:01:26,482: ... selected machine [] for node of type [pose_graph/pose_graph]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,485: start_process_monitor: creating ProcessMonitor
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,485: created process monitor <ProcessMonitor(ProcessMonitor-1, initial daemon)>
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,486: start_process_monitor: ProcessMonitor started
+[roslaunch.parent][INFO] 2025-09-06 22:01:26,486: starting parent XML-RPC server
+[roslaunch.server][INFO] 2025-09-06 22:01:26,486: starting roslaunch XML-RPC server
+[roslaunch.server][INFO] 2025-09-06 22:01:26,486: waiting for roslaunch XML-RPC server to initialize
+[xmlrpc][INFO] 2025-09-06 22:01:26,486: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-09-06 22:01:26,486: Started XML-RPC server [http://adam-XPS-15-9530:33381/]
+[xmlrpc][INFO] 2025-09-06 22:01:26,486: xml rpc node: starting XML-RPC server
+[roslaunch][INFO] 2025-09-06 22:01:26,497: started roslaunch server http://adam-XPS-15-9530:33381/
+[roslaunch.parent][INFO] 2025-09-06 22:01:26,497: ... parent XML-RPC server started
+[roslaunch][INFO] 2025-09-06 22:01:26,498: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2025-09-06 22:01:26,499: master.is_running[http://localhost:11311]
+[roslaunch][INFO] 2025-09-06 22:01:26,500: ROS_MASTER_URI=http://localhost:11311
+[roslaunch][INFO] 2025-09-06 22:01:26,503: setting /roslaunch/uris/host_adam_xps_15_9530__33381' to http://adam-XPS-15-9530:33381/
+[roslaunch][INFO] 2025-09-06 22:01:26,504: load_parameters starting ...
+[roslaunch][INFO] 2025-09-06 22:01:26,510: ... load_parameters complete
+[roslaunch][INFO] 2025-09-06 22:01:26,511: launch_nodes: launching local nodes ...
+[roslaunch][INFO] 2025-09-06 22:01:26,511: ... preparing to launch node of type [image_transport/republish]
+[roslaunch][INFO] 2025-09-06 22:01:26,511: create_node_process: package[image_transport] type[republish] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2025-09-06 22:01:26,511: process[image_republish-1]: env[{'PYTHONIOENCODING': 'UTF-8', 'ROS_DISTRO': 'kinetic', 'APPTAINER_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'APPTAINER_APPNAME': '', 'CATKIN_WS': '/root/catkin_ws', 'SINGULARITY_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'ROSLISP_PACKAGE_DIRECTORIES': '/root/catkin_ws/devel/share/common-lisp', 'PATH': '/opt/ros/kinetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'HOME': '/root/ros_home', 'PS1': 'Apptainer> ', 'ROS_LOG_FILENAME': '/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/roslaunch-adam-XPS-15-9530-443877.log', 'LANG': 'C.UTF-8', 'TERM': 'xterm', 'APPTAINER_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'SHLVL': '1', 'SINGULARITY_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'LD_LIBRARY_PATH': '/root/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/.singularity.d/libs', 'APPTAINER_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'ROS_MASTER_URI': 'http://localhost:11311', 'APPTAINER_NAME': 'ros_vins_mono.sif', 'ROS_PYTHON_VERSION': '2', 'LC_ALL': 'C.UTF-8', 'CMAKE_PREFIX_PATH': '/root/catkin_ws/devel:/opt/ros/kinetic', 'SINGULARITY_NAME': 'ros_vins_mono.sif', 'APPTAINER_COMMAND': 'exec', 'PYTHONPATH': '/opt/ros/kinetic/lib/python2.7/dist-packages', 'ROS_ROOT': '/opt/ros/kinetic/share/ros', 'PKG_CONFIG_PATH': '/root/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig', 'ROS_PACKAGE_PATH': '/root/catkin_ws/src/benchmark_publisher:/root/catkin_ws/src/camera_model:/root/catkin_ws/src/ar_demo:/root/catkin_ws/src/data_generator:/root/catkin_ws/src/feature_tracker:/root/catkin_ws/src/pose_graph:/root/catkin_ws/src/vins_estimator:/opt/ros/kinetic/share', '_': '/opt/ros/kinetic/bin/roslaunch', 'OLDPWD': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/VINS_Mono_M3DGR', 'SINGULARITY_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'CERES_VERSION': '1.12.0', 'PWD': '/root/catkin_ws', 'ROS_ETC_DIR': '/opt/ros/kinetic/etc/ros', 'ROS_VERSION': '1'}]
+[roslaunch][INFO] 2025-09-06 22:01:26,571: process[image_republish-1]: args[[u'/opt/ros/kinetic/lib/image_transport/republish', 'compressed', 'in:=/camera/color/image_raw', 'raw', 'out:=/camera/color/image_raw', u'__name:=image_republish']]
+[roslaunch][INFO] 2025-09-06 22:01:26,571: ... created process [image_republish-1]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,571: ProcessMonitor.register[image_republish-1]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,571: ProcessMonitor.register[image_republish-1] complete
+[roslaunch][INFO] 2025-09-06 22:01:26,571: ... registered process [image_republish-1]
+[roslaunch][INFO] 2025-09-06 22:01:26,571: process[image_republish-1]: starting os process
+[roslaunch][INFO] 2025-09-06 22:01:26,571: process[image_republish-1]: start w/ args [[u'/opt/ros/kinetic/lib/image_transport/republish', 'compressed', 'in:=/camera/color/image_raw', 'raw', 'out:=/camera/color/image_raw', u'__name:=image_republish', u'__log:=/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/image_republish-1.log']]
+[roslaunch][INFO] 2025-09-06 22:01:26,571: process[image_republish-1]: cwd will be [/root/ros_home/.ros]
+[roslaunch][INFO] 2025-09-06 22:01:26,686: process[image_republish-1]: started with pid [443894]
+[roslaunch][INFO] 2025-09-06 22:01:26,686: ... successfully launched [image_republish-1]
+[roslaunch][INFO] 2025-09-06 22:01:26,686: ... preparing to launch node of type [rosbag/play]
+[roslaunch][INFO] 2025-09-06 22:01:26,686: create_node_process: package[rosbag] type[play] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2025-09-06 22:01:26,687: process[bag_play-2]: env[{'PYTHONIOENCODING': 'UTF-8', 'ROS_DISTRO': 'kinetic', 'APPTAINER_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'APPTAINER_APPNAME': '', 'CATKIN_WS': '/root/catkin_ws', 'SINGULARITY_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'ROSLISP_PACKAGE_DIRECTORIES': '/root/catkin_ws/devel/share/common-lisp', 'PATH': '/opt/ros/kinetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'HOME': '/root/ros_home', 'PS1': 'Apptainer> ', 'ROS_LOG_FILENAME': '/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/roslaunch-adam-XPS-15-9530-443877.log', 'LANG': 'C.UTF-8', 'TERM': 'xterm', 'APPTAINER_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'SHLVL': '1', 'SINGULARITY_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'LD_LIBRARY_PATH': '/root/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/.singularity.d/libs', 'APPTAINER_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'ROS_MASTER_URI': 'http://localhost:11311', 'APPTAINER_NAME': 'ros_vins_mono.sif', 'ROS_PYTHON_VERSION': '2', 'LC_ALL': 'C.UTF-8', 'CMAKE_PREFIX_PATH': '/root/catkin_ws/devel:/opt/ros/kinetic', 'SINGULARITY_NAME': 'ros_vins_mono.sif', 'APPTAINER_COMMAND': 'exec', 'PYTHONPATH': '/opt/ros/kinetic/lib/python2.7/dist-packages', 'ROS_ROOT': '/opt/ros/kinetic/share/ros', 'PKG_CONFIG_PATH': '/root/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig', 'ROS_PACKAGE_PATH': '/root/catkin_ws/src/benchmark_publisher:/root/catkin_ws/src/camera_model:/root/catkin_ws/src/ar_demo:/root/catkin_ws/src/data_generator:/root/catkin_ws/src/feature_tracker:/root/catkin_ws/src/pose_graph:/root/catkin_ws/src/vins_estimator:/opt/ros/kinetic/share', '_': '/opt/ros/kinetic/bin/roslaunch', 'OLDPWD': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/VINS_Mono_M3DGR', 'SINGULARITY_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'CERES_VERSION': '1.12.0', 'PWD': '/root/catkin_ws', 'ROS_ETC_DIR': '/opt/ros/kinetic/etc/ros', 'ROS_VERSION': '1'}]
+[roslaunch][INFO] 2025-09-06 22:01:26,688: process[bag_play-2]: args[[u'/opt/ros/kinetic/lib/rosbag/play', '--clock', '-r', '1.0', '/root/data/ood_slam_data/datasets/m3dgr/Varying-illu01.bag', u'__name:=bag_play']]
+[roslaunch][INFO] 2025-09-06 22:01:26,689: ... created process [bag_play-2]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,689: ProcessMonitor.register[bag_play-2]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,689: ProcessMonitor.register[bag_play-2] complete
+[roslaunch][INFO] 2025-09-06 22:01:26,689: ... registered process [bag_play-2]
+[roslaunch][INFO] 2025-09-06 22:01:26,689: process[bag_play-2]: starting os process
+[roslaunch][INFO] 2025-09-06 22:01:26,689: process[bag_play-2]: start w/ args [[u'/opt/ros/kinetic/lib/rosbag/play', '--clock', '-r', '1.0', '/root/data/ood_slam_data/datasets/m3dgr/Varying-illu01.bag', u'__name:=bag_play', u'__log:=/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/bag_play-2.log']]
+[roslaunch][INFO] 2025-09-06 22:01:26,689: process[bag_play-2]: cwd will be [/root/ros_home/.ros]
+[roslaunch][INFO] 2025-09-06 22:01:26,815: process[bag_play-2]: started with pid [443895]
+[roslaunch][INFO] 2025-09-06 22:01:26,815: ... successfully launched [bag_play-2]
+[roslaunch][INFO] 2025-09-06 22:01:26,815: ... preparing to launch node of type [feature_tracker/feature_tracker]
+[roslaunch][INFO] 2025-09-06 22:01:26,815: create_node_process: package[feature_tracker] type[feature_tracker] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2025-09-06 22:01:26,815: process[feature_tracker-3]: env[{'PYTHONIOENCODING': 'UTF-8', 'ROS_DISTRO': 'kinetic', 'APPTAINER_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'APPTAINER_APPNAME': '', 'CATKIN_WS': '/root/catkin_ws', 'SINGULARITY_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'ROSLISP_PACKAGE_DIRECTORIES': '/root/catkin_ws/devel/share/common-lisp', 'PATH': '/opt/ros/kinetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'HOME': '/root/ros_home', 'PS1': 'Apptainer> ', 'ROS_LOG_FILENAME': '/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/roslaunch-adam-XPS-15-9530-443877.log', 'LANG': 'C.UTF-8', 'TERM': 'xterm', 'APPTAINER_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'SHLVL': '1', 'SINGULARITY_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'LD_LIBRARY_PATH': '/root/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/.singularity.d/libs', 'APPTAINER_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'ROS_MASTER_URI': 'http://localhost:11311', 'APPTAINER_NAME': 'ros_vins_mono.sif', 'ROS_PYTHON_VERSION': '2', 'LC_ALL': 'C.UTF-8', 'CMAKE_PREFIX_PATH': '/root/catkin_ws/devel:/opt/ros/kinetic', 'SINGULARITY_NAME': 'ros_vins_mono.sif', 'APPTAINER_COMMAND': 'exec', 'PYTHONPATH': '/opt/ros/kinetic/lib/python2.7/dist-packages', 'ROS_ROOT': '/opt/ros/kinetic/share/ros', 'PKG_CONFIG_PATH': '/root/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig', 'ROS_PACKAGE_PATH': '/root/catkin_ws/src/benchmark_publisher:/root/catkin_ws/src/camera_model:/root/catkin_ws/src/ar_demo:/root/catkin_ws/src/data_generator:/root/catkin_ws/src/feature_tracker:/root/catkin_ws/src/pose_graph:/root/catkin_ws/src/vins_estimator:/opt/ros/kinetic/share', '_': '/opt/ros/kinetic/bin/roslaunch', 'OLDPWD': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/VINS_Mono_M3DGR', 'SINGULARITY_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'CERES_VERSION': '1.12.0', 'PWD': '/root/catkin_ws', 'ROS_ETC_DIR': '/opt/ros/kinetic/etc/ros', 'ROS_VERSION': '1'}]
+[roslaunch][INFO] 2025-09-06 22:01:26,816: process[feature_tracker-3]: args[[u'/root/catkin_ws/devel/lib/feature_tracker/feature_tracker', u'__name:=feature_tracker']]
+[roslaunch][INFO] 2025-09-06 22:01:26,816: ... created process [feature_tracker-3]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,816: ProcessMonitor.register[feature_tracker-3]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,816: ProcessMonitor.register[feature_tracker-3] complete
+[roslaunch][INFO] 2025-09-06 22:01:26,816: ... registered process [feature_tracker-3]
+[roslaunch][INFO] 2025-09-06 22:01:26,816: process[feature_tracker-3]: starting os process
+[roslaunch][INFO] 2025-09-06 22:01:26,816: process[feature_tracker-3]: start w/ args [[u'/root/catkin_ws/devel/lib/feature_tracker/feature_tracker', u'__name:=feature_tracker', u'__log:=/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/feature_tracker-3.log']]
+[roslaunch][INFO] 2025-09-06 22:01:26,816: process[feature_tracker-3]: cwd will be [/root/ros_home/.ros]
+[roslaunch][INFO] 2025-09-06 22:01:26,941: process[feature_tracker-3]: started with pid [443930]
+[roslaunch][INFO] 2025-09-06 22:01:26,942: ... successfully launched [feature_tracker-3]
+[roslaunch][INFO] 2025-09-06 22:01:26,942: ... preparing to launch node of type [vins_estimator/vins_estimator]
+[roslaunch][INFO] 2025-09-06 22:01:26,942: create_node_process: package[vins_estimator] type[vins_estimator] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2025-09-06 22:01:26,942: process[vins_estimator-4]: env[{'PYTHONIOENCODING': 'UTF-8', 'ROS_DISTRO': 'kinetic', 'APPTAINER_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'APPTAINER_APPNAME': '', 'CATKIN_WS': '/root/catkin_ws', 'SINGULARITY_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'ROSLISP_PACKAGE_DIRECTORIES': '/root/catkin_ws/devel/share/common-lisp', 'PATH': '/opt/ros/kinetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'HOME': '/root/ros_home', 'PS1': 'Apptainer> ', 'ROS_LOG_FILENAME': '/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/roslaunch-adam-XPS-15-9530-443877.log', 'LANG': 'C.UTF-8', 'TERM': 'xterm', 'APPTAINER_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'SHLVL': '1', 'SINGULARITY_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'LD_LIBRARY_PATH': '/root/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/.singularity.d/libs', 'APPTAINER_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'ROS_MASTER_URI': 'http://localhost:11311', 'APPTAINER_NAME': 'ros_vins_mono.sif', 'ROS_PYTHON_VERSION': '2', 'LC_ALL': 'C.UTF-8', 'CMAKE_PREFIX_PATH': '/root/catkin_ws/devel:/opt/ros/kinetic', 'SINGULARITY_NAME': 'ros_vins_mono.sif', 'APPTAINER_COMMAND': 'exec', 'PYTHONPATH': '/opt/ros/kinetic/lib/python2.7/dist-packages', 'ROS_ROOT': '/opt/ros/kinetic/share/ros', 'PKG_CONFIG_PATH': '/root/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig', 'ROS_PACKAGE_PATH': '/root/catkin_ws/src/benchmark_publisher:/root/catkin_ws/src/camera_model:/root/catkin_ws/src/ar_demo:/root/catkin_ws/src/data_generator:/root/catkin_ws/src/feature_tracker:/root/catkin_ws/src/pose_graph:/root/catkin_ws/src/vins_estimator:/opt/ros/kinetic/share', '_': '/opt/ros/kinetic/bin/roslaunch', 'OLDPWD': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/VINS_Mono_M3DGR', 'SINGULARITY_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'CERES_VERSION': '1.12.0', 'PWD': '/root/catkin_ws', 'ROS_ETC_DIR': '/opt/ros/kinetic/etc/ros', 'ROS_VERSION': '1'}]
+[roslaunch][INFO] 2025-09-06 22:01:26,943: process[vins_estimator-4]: args[[u'/root/catkin_ws/devel/lib/vins_estimator/vins_estimator', u'__name:=vins_estimator']]
+[roslaunch][INFO] 2025-09-06 22:01:26,943: ... created process [vins_estimator-4]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,943: ProcessMonitor.register[vins_estimator-4]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:26,943: ProcessMonitor.register[vins_estimator-4] complete
+[roslaunch][INFO] 2025-09-06 22:01:26,943: ... registered process [vins_estimator-4]
+[roslaunch][INFO] 2025-09-06 22:01:26,943: process[vins_estimator-4]: starting os process
+[roslaunch][INFO] 2025-09-06 22:01:26,943: process[vins_estimator-4]: start w/ args [[u'/root/catkin_ws/devel/lib/vins_estimator/vins_estimator', u'__name:=vins_estimator', u'__log:=/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/vins_estimator-4.log']]
+[roslaunch][INFO] 2025-09-06 22:01:26,943: process[vins_estimator-4]: cwd will be [/root/ros_home/.ros]
+[roslaunch][INFO] 2025-09-06 22:01:27,070: process[vins_estimator-4]: started with pid [443972]
+[roslaunch][INFO] 2025-09-06 22:01:27,070: ... successfully launched [vins_estimator-4]
+[roslaunch][INFO] 2025-09-06 22:01:27,070: ... preparing to launch node of type [pose_graph/pose_graph]
+[roslaunch][INFO] 2025-09-06 22:01:27,070: create_node_process: package[pose_graph] type[pose_graph] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
+[roslaunch][INFO] 2025-09-06 22:01:27,070: process[pose_graph-5]: env[{'PYTHONIOENCODING': 'UTF-8', 'ROS_DISTRO': 'kinetic', 'APPTAINER_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'APPTAINER_APPNAME': '', 'CATKIN_WS': '/root/catkin_ws', 'SINGULARITY_ENVIRONMENT': '/.singularity.d/env/91-environment.sh', 'ROSLISP_PACKAGE_DIRECTORIES': '/root/catkin_ws/devel/share/common-lisp', 'PATH': '/opt/ros/kinetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'HOME': '/root/ros_home', 'PS1': 'Apptainer> ', 'ROS_LOG_FILENAME': '/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/roslaunch-adam-XPS-15-9530-443877.log', 'LANG': 'C.UTF-8', 'TERM': 'xterm', 'APPTAINER_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'SHLVL': '1', 'SINGULARITY_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'LD_LIBRARY_PATH': '/root/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/.singularity.d/libs', 'APPTAINER_BIND': '/root/ros_home,/root/catkin_ws,/root/data', 'ROS_MASTER_URI': 'http://localhost:11311', 'APPTAINER_NAME': 'ros_vins_mono.sif', 'ROS_PYTHON_VERSION': '2', 'LC_ALL': 'C.UTF-8', 'CMAKE_PREFIX_PATH': '/root/catkin_ws/devel:/opt/ros/kinetic', 'SINGULARITY_NAME': 'ros_vins_mono.sif', 'APPTAINER_COMMAND': 'exec', 'PYTHONPATH': '/opt/ros/kinetic/lib/python2.7/dist-packages', 'ROS_ROOT': '/opt/ros/kinetic/share/ros', 'PKG_CONFIG_PATH': '/root/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig', 'ROS_PACKAGE_PATH': '/root/catkin_ws/src/benchmark_publisher:/root/catkin_ws/src/camera_model:/root/catkin_ws/src/ar_demo:/root/catkin_ws/src/data_generator:/root/catkin_ws/src/feature_tracker:/root/catkin_ws/src/pose_graph:/root/catkin_ws/src/vins_estimator:/opt/ros/kinetic/share', '_': '/opt/ros/kinetic/bin/roslaunch', 'OLDPWD': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/VINS_Mono_M3DGR', 'SINGULARITY_CONTAINER': '/home/adam/Documents/MILA/projects/ood_slam/M3DGR/baseline_systems/ros_vins_mono.sif', 'CERES_VERSION': '1.12.0', 'PWD': '/root/catkin_ws', 'ROS_ETC_DIR': '/opt/ros/kinetic/etc/ros', 'ROS_VERSION': '1'}]
+[roslaunch][INFO] 2025-09-06 22:01:27,071: process[pose_graph-5]: args[[u'/root/catkin_ws/devel/lib/pose_graph/pose_graph', u'__name:=pose_graph']]
+[roslaunch][INFO] 2025-09-06 22:01:27,071: ... created process [pose_graph-5]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:27,071: ProcessMonitor.register[pose_graph-5]
+[roslaunch.pmon][INFO] 2025-09-06 22:01:27,071: ProcessMonitor.register[pose_graph-5] complete
+[roslaunch][INFO] 2025-09-06 22:01:27,071: ... registered process [pose_graph-5]
+[roslaunch][INFO] 2025-09-06 22:01:27,071: process[pose_graph-5]: starting os process
+[roslaunch][INFO] 2025-09-06 22:01:27,071: process[pose_graph-5]: start w/ args [[u'/root/catkin_ws/devel/lib/pose_graph/pose_graph', u'__name:=pose_graph', u'__log:=/root/ros_home/.ros/log/dbfa9754-8b88-11f0-9f37-687a647cda03/pose_graph-5.log']]
+[roslaunch][INFO] 2025-09-06 22:01:27,071: process[pose_graph-5]: cwd will be [/root/ros_home/.ros]
+[roslaunch][INFO] 2025-09-06 22:01:27,212: process[pose_graph-5]: started with pid [444000]
+[roslaunch][INFO] 2025-09-06 22:01:27,213: ... successfully launched [pose_graph-5]
+[roslaunch][INFO] 2025-09-06 22:01:27,213: ... launch_nodes complete
+[roslaunch.pmon][INFO] 2025-09-06 22:01:27,213: registrations completed <ProcessMonitor(ProcessMonitor-1, started daemon 126069356824320)>
+[roslaunch.parent][INFO] 2025-09-06 22:01:27,213: ... roslaunch parent running, waiting for process exit
+[roslaunch][INFO] 2025-09-06 22:01:27,213: spin
+[roslaunch.pmon][INFO] 2025-09-06 22:02:26,852: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, started daemon 126069356824320)>
+[roslaunch.pmon][INFO] 2025-09-06 22:02:26,910: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 126069356824320)>
+[roslaunch.pmon][INFO] 2025-09-06 22:02:26,910: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 126069356824320)>: remaining procs are [<roslaunch.nodeprocess.LocalProcess object at 0x72a8cf6341d0>, <roslaunch.nodeprocess.LocalProcess object at 0x72a8cf634450>, <roslaunch.nodeprocess.LocalProcess object at 0x72a8cf634710>, <roslaunch.nodeprocess.LocalProcess object at 0x72a8cf634650>, <roslaunch.nodeprocess.LocalProcess object at 0x72a8cf634250>]
+[roslaunch.pmon][INFO] 2025-09-06 22:02:26,911: ProcessMonitor exit: killing pose_graph-5
+[roslaunch][INFO] 2025-09-06 22:02:26,911: [pose_graph-5] killing on exit
+[roslaunch.pmon][INFO] 2025-09-06 22:02:26,911: ProcessMonitor exit: killing vins_estimator-4
+[roslaunch][INFO] 2025-09-06 22:02:26,911: [vins_estimator-4] killing on exit
+[roslaunch][INFO] 2025-09-06 22:02:26,911: process[pose_graph-5]: killing os process with pid[444000] pgid[444000]
+[roslaunch.pmon][INFO] 2025-09-06 22:02:26,911: ProcessMonitor exit: killing feature_tracker-3
+[roslaunch][INFO] 2025-09-06 22:02:26,912: process[vins_estimator-4]: killing os process with pid[443972] pgid[443972]
+[roslaunch.pmon][INFO] 2025-09-06 22:02:26,912: ProcessMonitor exit: killing bag_play-2
+[roslaunch][INFO] 2025-09-06 22:02:26,912: [bag_play-2] killing on exit
+[roslaunch.pmon][INFO] 2025-09-06 22:02:26,912: ProcessMonitor exit: killing image_republish-1
+[roslaunch][INFO] 2025-09-06 22:02:26,912: [feature_tracker-3] killing on exit
+[roslaunch][INFO] 2025-09-06 22:02:26,912: [vins_estimator-4] sending SIGINT to pgid [443972]
+[roslaunch][INFO] 2025-09-06 22:02:26,913: [vins_estimator-4] sent SIGINT to pgid [443972]
+[roslaunch][INFO] 2025-09-06 22:02:26,913: process[bag_play-2]: killing os process with pid[443895] pgid[443895]
+[roslaunch][INFO] 2025-09-06 22:02:26,913: [image_republish-1] killing on exit
+[roslaunch][INFO] 2025-09-06 22:02:26,913: process[feature_tracker-3]: killing os process with pid[443930] pgid[443930]
+[roslaunch][INFO] 2025-09-06 22:02:26,912: [pose_graph-5] sending SIGINT to pgid [444000]
+[roslaunch][INFO] 2025-09-06 22:02:26,913: [bag_play-2] sending SIGINT to pgid [443895]
+[roslaunch][INFO] 2025-09-06 22:02:26,914: [bag_play-2] sent SIGINT to pgid [443895]
+[roslaunch][INFO] 2025-09-06 22:02:26,914: process[image_republish-1]: killing os process with pid[443894] pgid[443894]
+[roslaunch][INFO] 2025-09-06 22:02:26,914: [pose_graph-5] sent SIGINT to pgid [444000]
+[roslaunch][INFO] 2025-09-06 22:02:26,913: [feature_tracker-3] sending SIGINT to pgid [443930]
+[roslaunch][INFO] 2025-09-06 22:02:26,914: [image_republish-1] sending SIGINT to pgid [443894]
+[roslaunch][INFO] 2025-09-06 22:02:26,915: [image_republish-1] sent SIGINT to pgid [443894]
+[roslaunch][INFO] 2025-09-06 22:02:26,915: [feature_tracker-3] sent SIGINT to pgid [443930]
+[roslaunch][INFO] 2025-09-06 22:02:27,215: process[bag_play-2]: SIGINT killed with return value 0
+[roslaunch][INFO] 2025-09-06 22:02:27,215: process[image_republish-1]: SIGINT killed with return value 0
+[roslaunch][INFO] 2025-09-06 22:02:27,314: process[vins_estimator-4]: SIGINT killed with return value -6
+[roslaunch][INFO] 2025-09-06 22:02:27,316: process[feature_tracker-3]: SIGINT killed with return value 0
+[roslaunch][INFO] 2025-09-06 22:02:27,415: process[pose_graph-5]: SIGINT killed with return value -6
+[roslaunch.pmon][INFO] 2025-09-06 22:02:27,416: ProcessMonitor exit: cleaning up data structures and signals
+[roslaunch.pmon][INFO] 2025-09-06 22:02:27,417: ProcessMonitor exit: pmon has shutdown
+[roslaunch][INFO] 2025-09-06 22:02:27,450: process monitor is done spinning, initiating full shutdown
+[roslaunch][INFO] 2025-09-06 22:02:27,450: runner.stop()
+[roslaunch][INFO] 2025-09-06 22:02:27,451: shutting down processing monitor...
+[roslaunch][INFO] 2025-09-06 22:02:27,451: shutting down processing monitor <ProcessMonitor(ProcessMonitor-1, stopped daemon 126069356824320)>
+[roslaunch.pmon][INFO] 2025-09-06 22:02:27,451: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 126069356824320)>
+[roslaunch][INFO] 2025-09-06 22:02:27,451: ... shutting down processing monitor complete
+[roslaunch][INFO] 2025-09-06 22:02:27,451: done
+[roslaunch.pmon][INFO] 2025-09-06 22:02:27,451: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 126069356824320)>
+[rospy.core][INFO] 2025-09-06 22:02:27,451: signal_shutdown [atexit]

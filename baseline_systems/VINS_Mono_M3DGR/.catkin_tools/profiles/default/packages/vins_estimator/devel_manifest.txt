@@ -1,0 +1,6 @@
+vins_estimator
+/root/catkin_ws/devel/.private/vins_estimator/cmake.lock /root/catkin_ws/devel/./cmake.lock
+/root/catkin_ws/devel/.private/vins_estimator/lib/vins_estimator/vins_estimator /root/catkin_ws/devel/lib/vins_estimator/vins_estimator
+/root/catkin_ws/devel/.private/vins_estimator/lib/pkgconfig/vins_estimator.pc /root/catkin_ws/devel/lib/pkgconfig/vins_estimator.pc
+/root/catkin_ws/devel/.private/vins_estimator/share/vins_estimator/cmake/vins_estimatorConfig.cmake /root/catkin_ws/devel/share/vins_estimator/cmake/vins_estimatorConfig.cmake
+/root/catkin_ws/devel/.private/vins_estimator/share/vins_estimator/cmake/vins_estimatorConfig-version.cmake /root/catkin_ws/devel/share/vins_estimator/cmake/vins_estimatorConfig-version.cmake

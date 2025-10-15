@@ -1,0 +1,9 @@
+std_msgs/Header header     
+int32 n_tracked_prev
+int32 n_tracked_after_lk
+float64 lk_err_med
+float64 lk_err_p90
+float64 flow_mag_med
+float64 flow_mag_p90
+float64 geom_inlier_ratio
+int32  n_active_tracks
