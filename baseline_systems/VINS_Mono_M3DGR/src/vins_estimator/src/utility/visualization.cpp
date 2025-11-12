@@ -153,6 +153,11 @@ void pubOdometry(const Estimator &estimator, const std_msgs::Header &header)
         relo_path.poses.push_back(pose_stamped);
         pub_relo_path.publish(relo_path);
 
+        // LOG FINAL PUBLISHED VALUES
+        ROS_WARN("FINAL_PUBLISHED: P=[%.3f,%.3f,%.3f], timestamp=%.9f", 
+                 estimator.Ps[WINDOW_SIZE].x(), estimator.Ps[WINDOW_SIZE].y(), estimator.Ps[WINDOW_SIZE].z(),
+                 header.stamp.toSec());
+
         // write result to file
         ofstream foutC(VINS_RESULT_PATH, ios::app);
         foutC.setf(ios::fixed, ios::floatfield);

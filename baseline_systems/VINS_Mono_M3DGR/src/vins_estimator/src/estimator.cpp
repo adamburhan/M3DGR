@@ -96,7 +96,15 @@ void Estimator::processIMU(double dt, const Vector3d &linear_acceleration, const
     }
     if (frame_count != 0)
     {
+        // LOG PREINTEGRATION
+        int j = frame_count;         
+        ROS_WARN("PREINT_LOG: frame=%d, dt=%.6f, adding to preintegration", frame_count, dt);
+
         pre_integrations[frame_count]->push_back(dt, linear_acceleration, angular_velocity);
+
+        // LOG DIRECT PROPAGATION - BEFORE
+        ROS_WARN("DIRECT_BEFORE: frame=%d, P=[%.3f,%.3f,%.3f]", frame_count, Ps[j].x(), Ps[j].y(), Ps[j].z());
+
         //if(solver_flag != NON_LINEAR)
             tmp_pre_integration->push_back(dt, linear_acceleration, angular_velocity);
 
@@ -104,7 +112,6 @@ void Estimator::processIMU(double dt, const Vector3d &linear_acceleration, const
         linear_acceleration_buf[frame_count].push_back(linear_acceleration);
         angular_velocity_buf[frame_count].push_back(angular_velocity);
 
-        int j = frame_count;         
         Vector3d un_acc_0 = Rs[j] * (acc_0 - Bas[j]) - g;
         Vector3d un_gyr = 0.5 * (gyr_0 + angular_velocity) - Bgs[j];
         Rs[j] *= Utility::deltaQ(un_gyr * dt).toRotationMatrix();
@@ -112,6 +119,9 @@ void Estimator::processIMU(double dt, const Vector3d &linear_acceleration, const
         Vector3d un_acc = 0.5 * (un_acc_0 + un_acc_1);
         Ps[j] += dt * Vs[j] + 0.5 * dt * dt * un_acc;
         Vs[j] += dt * un_acc;
+
+        // LOG DIRECT PROPAGATION - AFTER
+        ROS_WARN("DIRECT_AFTER: frame=%d, P=[%.3f,%.3f,%.3f]", frame_count, Ps[j].x(), Ps[j].y(), Ps[j].z());
     }
     acc_0 = linear_acceleration;
     gyr_0 = angular_velocity;
@@ -742,12 +752,20 @@ void Estimator::optimization()
                                  last_marginalization_parameter_blocks);
     }
 
+    // LOG OPTIMIZATION INPUT
+    ROS_WARN("OPT_INPUT: Using Ps[WINDOW_SIZE]=[%.3f,%.3f,%.3f] BEFORE optimization", 
+             Ps[WINDOW_SIZE].x(), Ps[WINDOW_SIZE].y(), Ps[WINDOW_SIZE].z());
+
     for (int i = 0; i < WINDOW_SIZE; i++)
     {
         int j = i + 1;
         if (pre_integrations[j]->sum_dt > 10.0)
             continue;
         IMUFactor* imu_factor = new IMUFactor(pre_integrations[j]);
+
+        // LOG WHICH PREINTEGRATION IS USED
+        ROS_WARN("OPT_FACTOR: Using pre_integrations[%d], sum_dt=%.6f", j, pre_integrations[j]->sum_dt);
+
         problem.AddResidualBlock(imu_factor, NULL, para_Pose[i], para_SpeedBias[i], para_Pose[j], para_SpeedBias[j]);
     }
     int f_m_cnt = 0;
@@ -1034,6 +1052,10 @@ void Estimator::optimization()
     ROS_DEBUG("whole marginalization costs: %f", t_whole_marginalization.toc());
     
     ROS_DEBUG("whole time for ceres: %f", t_whole.toc());
+
+    // LOG OPTIMIZATION OUTPUT
+    ROS_WARN("OPT_OUTPUT: Ps[WINDOW_SIZE]=[%.3f,%.3f,%.3f] AFTER optimization", 
+             Ps[WINDOW_SIZE].x(), Ps[WINDOW_SIZE].y(), Ps[WINDOW_SIZE].z());
 }
 
 void Estimator::slideWindow()
